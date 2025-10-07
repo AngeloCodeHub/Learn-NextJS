@@ -1,9 +1,17 @@
 {
   "userIgnoreFilters": [
     "node_modules/",
-    "src/"
+    "src/",
+    "SrcCode/",
+    "app/",
+    "components/",
+    "config/",
+    "public/",
+    "SrcCode-Old/",
+    "styles/",
+    "types/"
   ],
-  "showInlineTitle": true,
+  "showInlineTitle": false,
   "showLineNumber": true,
   "alwaysUpdateLinks": true,
   "defaultViewMode": "preview",

@@ -1,7 +1,8 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# Obsidian vault config
+# Obsidian vault config（不要更改行號）
 .obsidian/workspace*.json
+#.obsidian
 
 # output
 dist
@@ -64,8 +65,3 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-
-pnpm-lock.yaml
-yarn.lock
-package-lock.json
-bun.lockb
