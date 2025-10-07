@@ -1,7 +1,15 @@
 {
   "userIgnoreFilters": [
     "node_modules/",
-    "src/"
+    "src/",
+    "SrcCode/",
+    "app/",
+    "components/",
+    "config/",
+    "public/",
+    "SrcCode-Old/",
+    "styles/",
+    "types/"
   ],
   "showInlineTitle": true,
   "showLineNumber": true,
