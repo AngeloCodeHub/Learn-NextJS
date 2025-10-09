@@ -1,56 +1,59 @@
+"use client";
+import { Button } from "@heroui/button";
+import { Divider } from "@heroui/divider";
+import { Form } from "@heroui/form";
+import { Input } from "@heroui/input";
 import { Link } from "@heroui/link";
-import { Snippet } from "@heroui/snippet";
-import { Code } from "@heroui/code";
-import { button as buttonStyles } from "@heroui/theme";
-
-import { siteConfig } from "@/config/site";
-import { title, subtitle } from "@/components/primitives";
-import { GithubIcon } from "@/components/icons";
+import { Icon } from "@iconify/react";
 
 export default function Home() {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    console.log("Login submitted");
+  };
+
   return (
-    <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-      <div className="inline-block max-w-xl text-center justify-center">
-        <span className={title()}>Make&nbsp;</span>
-        <span className={title({ color: "violet" })}>beautiful&nbsp;</span>
-        <br />
-        <span className={title()}>
-          websites regardless of your design experience.
-        </span>
-        <div className={subtitle({ class: "mt-4" })}>
-          Beautiful, fast and modern React UI library.
+    <div className="bg-default-50 flex min-h-screen items-center justify-center p-4">
+      <div className="bg-content1 flex w-full max-w-sm flex-col gap-4 rounded-lg p-6 shadow-md">
+        <h2 className="text-xl font-medium">北半球會員登入</h2>
+        <Form className="flex flex-col gap-3" onSubmit={handleSubmit}>
+          {/* <Form className="flex flex-col gap-3"> */}
+          <Input
+            isRequired
+            label="Email"
+            name="email"
+            placeholder="Enter your email"
+            type="email"
+            variant="bordered"
+          />
+          <Input
+            isRequired
+            label="Password"
+            name="password"
+            placeholder="Enter your password"
+            type="password"
+            variant="bordered"
+          />
+          <Button className="w-full" color="primary" type="submit">
+            Sign In
+          </Button>
+        </Form>
+        <Divider />
+        <div className="flex flex-col gap-2">
+          <Button startContent={<Icon icon="flat-color-icons:google" width={24} />} variant="bordered" >
+            Google 登入
+          </Button>
+          <Button startContent={<Icon icon="logos:facebook" width={24} />} variant="bordered">
+            Facebook 登入
+          </Button>
         </div>
+        <p className="text-small text-center">
+          註冊帳戶?{" "}
+          <Link href="#" size="sm">
+            Sign Up
+          </Link>
+        </p>
       </div>
-
-      <div className="flex gap-3">
-        <Link
-          isExternal
-          className={buttonStyles({
-            color: "primary",
-            radius: "full",
-            variant: "shadow",
-          })}
-          href={siteConfig.links.docs}
-        >
-          Documentation
-        </Link>
-        <Link
-          isExternal
-          className={buttonStyles({ variant: "bordered", radius: "full" })}
-          href={siteConfig.links.github}
-        >
-          <GithubIcon size={20} />
-          GitHub
-        </Link>
-      </div>
-
-      <div className="mt-8">
-        <Snippet hideCopyButton hideSymbol variant="bordered">
-          <span>
-            Get started by editing <Code color="primary">app/page.tsx</Code>
-          </span>
-        </Snippet>
-      </div>
-    </section>
+    </div>
   );
 }
