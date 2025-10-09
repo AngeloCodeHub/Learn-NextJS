@@ -58,13 +58,6 @@
         "name": "",
         "active": true,
         "type": "DIRECTORIES",
-        "pattern": "node_modules",
-        "patternType": "STRICT"
-      },
-      {
-        "name": "",
-        "active": true,
-        "type": "DIRECTORIES",
         "pattern": "SrcCode",
         "patternType": "STRICT"
       },
@@ -115,6 +108,13 @@
         "active": true,
         "type": "DIRECTORIES",
         "pattern": "types",
+        "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "DIRECTORIES",
+        "pattern": "node_modules",
         "patternType": "STRICT"
       }
     ],
