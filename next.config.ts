@@ -3,13 +3,13 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   /* config options here */
   eslint: {
-    ignoreDuringBuilds: false,
+    // ignoreDuringBuilds: false,
   },
   typescript: {
-    ignoreBuildErrors: false,
+    // ignoreBuildErrors: false,
   },
   images: {
-    unoptimized: false,
+    // unoptimized: false,
   },
 };
 
