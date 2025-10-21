@@ -51,13 +51,6 @@
         "name": "",
         "active": true,
         "type": "DIRECTORIES",
-        "pattern": "src",
-        "patternType": "STRICT"
-      },
-      {
-        "name": "",
-        "active": true,
-        "type": "DIRECTORIES",
         "pattern": "SrcCode",
         "patternType": "STRICT"
       },

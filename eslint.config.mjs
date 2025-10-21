@@ -14,12 +14,12 @@ const eslintConfig = [
   {
     ignores: [
       "node_modules/**",
-      "SrcCode/**",
       ".next/**",
       "out/**",
       "build/**",
-      "SrcCode/**",
       "next-env.d.ts",
+      "SrcCode/**",
+      ".obsidian/**",
     ],
   },
 ];
