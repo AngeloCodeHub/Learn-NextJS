@@ -1,9 +1,17 @@
+import '@/styles/globals.css';
+import { inter } from "@/app/ui/fonts";
 
-
-export default function RootLayout({ children, }: { children: React.ReactNode; }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="zh-tw">
-      <body>{children}</body>
+      <body className={`${inter.className} antialiased`}>
+        {/* <body> */}
+        {children}
+      </body>
     </html>
   );
 }
